@@ -2,12 +2,14 @@ package main;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
+import javax.swing.JApplet;
 import javax.swing.JFrame;
 
-public class MainGame {
+public class MainGame extends JFrame {
 	private static final long serialVersionUID = 1L;
-	public static final String NAME = "Physics Game";
+	public static final String NAME = "Physics - Projectile Motion Example";
 	public static final int HEIGHT = 160;
 	public static final int WIDTH = HEIGHT * 16 / 9;
 	public static final int SCALE = 4;
@@ -31,20 +33,29 @@ public class MainGame {
 	
 	public void run() {
 		JFrame frame = new JFrame(MainGame.NAME);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		frame.setLayout(new BorderLayout());
 		
-		GamePanel game = new GamePanel();
+		
+		OptionsPanel options = new OptionsPanel();
+		GamePanel game = new GamePanel(options);
 		
 		frame.setSize(new Dimension ( WIDTH * SCALE, HEIGHT * SCALE ));
 		
 		frame.add(game, BorderLayout.CENTER);
+		frame.add(options, BorderLayout.SOUTH);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		frame.setVisible(true);
 		while(true) {
 			frameStart = System.currentTimeMillis();
-			game.run();
+			
+			if(options.isStartGame() == true) {
+				game.run();
+			}
+			else {
+				game.reset();
+			}
 			
 			// calculate the time it took to render the frame
 			elapsedTime = System.currentTimeMillis() - frameStart;
@@ -75,8 +86,6 @@ public class MainGame {
 			}
 		}
 	}
-
-
 
 	public static void main(String[] args) {
 		new MainGame();
