@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="https://github.com/Fogest/Projectile-Motion/raw/master/javatest/3_25angle/" href="">
+    <information>
+        <title>Launch applet with Web Start</title>
+        <vendor>Foo Bar Inc.</vendor>
+        <offline-allowed/>
+    </information>
+    <resources>
+        <j2se version="1.5+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="physics.jar" main="true" />
+    </resources>
+    <application-desc main-class="main.MainGame">
+    </application-desc>
+  <update check="background"/>
+</jnlp>

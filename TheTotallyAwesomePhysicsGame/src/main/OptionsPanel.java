@@ -34,7 +34,7 @@ public class OptionsPanel extends JPanel implements ActionListener {
 
 		angleLabel = new JLabel("Angle");
 		angleField = new JTextField(4);
-		angleField.setText("90");
+		angleField.setText("25");
 		this.add(angleLabel);
 		this.add(angleField);
 
@@ -52,7 +52,7 @@ public class OptionsPanel extends JPanel implements ActionListener {
 
 		gravityLabel = new JLabel("Gravity");
 		gravityField = new JTextField(4);
-		gravityField.setText("-9.8");
+		gravityField.setText("0.0");
 		this.add(gravityLabel);
 		this.add(gravityField);
 		
