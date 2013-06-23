@@ -34,7 +34,7 @@ public class OptionsPanel extends JPanel implements ActionListener {
 
 		angleLabel = new JLabel("Angle");
 		angleField = new JTextField(4);
-		angleField.setText("45");
+		angleField.setText("25");
 		this.add(angleLabel);
 		this.add(angleField);
 
