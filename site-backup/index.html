@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Projectile-motion by Fogest</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Fogest/Projectile-Motion">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Fogest/Projectile-Motion/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Fogest/Projectile-Motion/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Projectile-motion</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Fogest">Fogest</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="physics-project-on-projectile-motion---by-justin-visser" class="anchor" href="#physics-project-on-projectile-motion---by-justin-visser"><span class="octicon octicon-link"></span></a>Physics Project on Projectile Motion - By Justin Visser</h1>
+
+<p>Projectile motion consists of an components. Some of the components that can be applied to pojectile motion are:</p>
+
+<ul>
+<li>Kinematic's to determine the vertical and horizontal components of the motion of projectile</li>
+<li>Newton's Laws - Projectile should continue in a straight line in the direction it is fired from, but due to some factors this is not true. Mainly a projectile is affected by gravity, thus causing an arc shape (as examples below will show)</li>
+<li>Gravitational and Kinetic energies change as the projectile moves through the air. We can analyze what these energies could be at certain points</li>
+</ul><p>Utilizing Java I was able to create a mock projectile simulation (see lower in document for code samples)</p>
+
+<h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="https://github.com/Fogest/Projectile-Motion/raw/master/javatest/1_45angle/run.jnlp">Click to download demo file</a></p>
+
+<h2>
+<a name="image-explanation" class="anchor" href="#image-explanation"><span class="octicon octicon-link"></span></a>Image Explanation</h2>
+
+<p><img src="https://raw.github.com/Fogest/Projectile-Motion/master/images/Initial%20example-sketch%20and%20fbd.png" alt="Initial Image"></p>
+
+<h2>
+<a name="calculations-example" class="anchor" href="#calculations-example"><span class="octicon octicon-link"></span></a>Calculations Example</h2>
+
+<p><img src="https://raw.github.com/Fogest/Projectile-Motion/master/images/calculations%20for%20first.png" alt="Calculations Example"></p>
+
+<h2>
+<a name="analyzing-the-energies" class="anchor" href="#analyzing-the-energies"><span class="octicon octicon-link"></span></a>Analyzing the Energies</h2>
+
+<p><img src="https://raw.github.com/Fogest/Projectile-Motion/master/images/energy%20for%20first%20example.png" alt="energies"></p>
+
+<h2>
+<a name="comparing-other-angles" class="anchor" href="#comparing-other-angles"><span class="octicon octicon-link"></span></a>Comparing other angles</h2>
+
+<p><a href="https://github.com/Fogest/Projectile-Motion/raw/master/javatest/2_75angle/run.jnlp">75 Degree Angle Example</a></p>
+
+<p><a href="https://github.com/Fogest/Projectile-Motion/raw/master/javatest/3_25angle/run.jnlp">25 Degree Angle Example</a></p>
+
+<h3>
+<a name="comparing-the-three" class="anchor" href="#comparing-the-three"><span class="octicon octicon-link"></span></a>Comparing the three</h3>
+
+<p><img src="https://raw.github.com/Fogest/Projectile-Motion/master/images/comparing.png" alt="Comparing the three"></p>
+
+<h3>
+<a name="conclusion-relating-to-angles" class="anchor" href="#conclusion-relating-to-angles"><span class="octicon octicon-link"></span></a>Conclusion relating to angles</h3>
+
+<p>It is clear that achieving the optimal range can be achieved at a 45 degree angle (ref 1). 45 degrees is in between 0 and 90 degrees, allowing for an even amount of of distance covered both in the x and y axis. If one has a lot more than the other, there is going to be less range. Look at the 75 degree angle, there is a large y value compared to the x value, therefore resulting in less range. On the other hand, at 25 degrees there is a large x value and a very small y value, therefore also resulting in a short and quick projection. 45 degrees is therefore the optimal angle.</p>
+
+<h2>
+<a name="gravity" class="anchor" href="#gravity"><span class="octicon octicon-link"></span></a>Gravity</h2>
+
+<p>As seen in all the examples so far, the projectile experienced a parabolic curve, due to being affected by earths gravity at -9.8 m/s. There is no longer a parabolic curve if gravity is eliminated (See example below)</p>
+
+<p><a href="https://github.com/Fogest/Projectile-Motion/raw/master/javatest/4_no_gravity/run.jnlp">Projectile Motion with no Gravity</a></p>
+
+<p>With no gravity a projectile just continues in a straight line in the direction it was shot in. The projectile would continue on forever, unless it hit something else. This is dictated by Newtons first law, the projectile should continue at a constant velocity, unless acted upon by an external force</p>
+
+<h3>
+<a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References</h3>
+
+<ol>
+<li>"Maximum Range." Physics Classroom. N.p., n.d. Web. 21 June 2013.</li>
+</ol>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-28142238-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
